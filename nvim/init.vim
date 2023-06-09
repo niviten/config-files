@@ -43,3 +43,19 @@ set path=.,,**
 set ignorecase
 " highlight search
 set hlsearch
+
+
+" vim-plug
+call plug#begin()
+
+    " theme
+    Plug 'lifepillar/vim-solarized8'
+    
+    " nerd tree
+    Plug 'preservim/nerdtree'
+
+call plug#end()
+
+" theme
+set background=light
+colorscheme solarized8_high
