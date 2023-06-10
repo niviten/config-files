@@ -1,5 +1,14 @@
-" show line number
-set number
+" truecolors for neovim
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
+set number  " show line number
 
 " indentation
 set autoindent
@@ -8,11 +17,12 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" 80, 120 limit
-set colorcolumn=80,120
+set clipboard=unnamed,unnamedplus   " show os clipboard
 
-" splits
-set splitbelow splitright
+set colorcolumn=80,120  " show 80, 120 limit
+let &colorcolumn='80,' . join(range(120,999),',')   " change bg after column limit
+
+set splitbelow splitright   " splits in natural way
 
 " remap splits navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
@@ -33,29 +43,42 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
 
-" setting path
-" used in :tabfind
-set path=.,,**
+set path=.,,**  " search in current directory and subdirectories
 
-" search in file
-" case insensitive search
-" default is sensitive search
-set ignorecase
-" highlight search
-set hlsearch
-
+set ignorecase  " search ignore case
+set hlsearch    " highlight search results
+set incsearch   " incremental search
 
 " vim-plug
 call plug#begin()
-
-    " theme
-    Plug 'lifepillar/vim-solarized8'
+    " gruvbox used by ThePrimeagen
+    Plug 'morhetz/gruvbox'
     
     " nerd tree
     Plug 'preservim/nerdtree'
 
+    " github copilot
+    Plug 'github/copilot.vim'
+
+    " for git " not using now
+    " Plug 'tpope/vim-fugitive'
+    
+    " for js
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto completion for js
+
+    " enhanced status bar
+    Plug 'itchyny/lightline.vim'
+
+    " Buftabline - Use tabline as buffer list
+    Plug 'ap/vim-buftabline'
+
+    " dense-analysis/ale - Asynchronous Lint Engine
+    " Check if it's useful
+    " Plug 'dense-analysis/ale'
 call plug#end()
 
-" theme
-set background=light
-colorscheme solarized8_high
+" theme configs
+set background=light    " light theme
+let g:gruvbox_contrast_light = 'hard'   " hard contrast
+let g:gruvbox_color_column = 'bg1'      " column limit color
+colorscheme gruvbox
