@@ -70,7 +70,7 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
 
     " Buftabline - Use tabline as buffer list
-    Plug 'ap/vim-buftabline'
+    " Plug 'ap/vim-buftabline'
 
     " dense-analysis/ale - Asynchronous Lint Engine
     " Check if it's useful
