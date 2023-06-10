@@ -16,6 +16,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smartindent
 
 set clipboard=unnamed,unnamedplus   " show os clipboard
 
@@ -49,6 +50,16 @@ set ignorecase  " search ignore case
 set hlsearch    " highlight search results
 set incsearch   " incremental search
 
+filetype plugin indent on   " enable filetype plugins and indentations
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab smartindent " set js indentation
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab smartindent " set ts indentation
+autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab smartindent " set html indentation
+autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab smartindent " set c indentation
+autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab smartindent " set cpp indentation
+autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab smartindent " set python indentation
+autocmd FileType go setlocal ts=4 sts=4 sw=4 expandtab smartindent " set go indentation
+autocmd FileType rust setlocal ts=4 sts=4 sw=4 expandtab smartindent " set rust indentation
+
 " vim-plug
 call plug#begin()
     " gruvbox used by ThePrimeagen
@@ -75,6 +86,9 @@ call plug#begin()
     " dense-analysis/ale - Asynchronous Lint Engine
     " Check if it's useful
     " Plug 'dense-analysis/ale'
+    
+    " Auto pair
+    Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " theme configs
