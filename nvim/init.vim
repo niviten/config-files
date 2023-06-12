@@ -60,6 +60,9 @@ autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab smartindent " set pyt
 autocmd FileType go setlocal ts=4 sts=4 sw=4 expandtab smartindent " set go indentation
 autocmd FileType rust setlocal ts=4 sts=4 sw=4 expandtab smartindent " set rust indentation
 
+" Disable ALE by default
+let g:ale_enabled = 0
+
 " vim-plug
 call plug#begin()
     " gruvbox used by ThePrimeagen
@@ -89,6 +92,12 @@ call plug#begin()
     
     " Auto pair
     Plug 'jiangmiao/auto-pairs'
+
+    " For rust
+    Plug 'rust-lang/rust.vim'
+
+    " ALE
+    Plug 'dense-analysis/ale'
 call plug#end()
 
 " theme configs
