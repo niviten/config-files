@@ -37,7 +37,6 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
-" switching between tabs
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 " moving tabs
@@ -98,6 +97,11 @@ call plug#begin()
 
     " ALE
     Plug 'dense-analysis/ale'
+
+    " Search files
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " theme configs
@@ -105,3 +109,4 @@ set background=light    " light theme
 let g:gruvbox_contrast_light = 'hard'   " hard contrast
 let g:gruvbox_color_column = 'bg1'      " column limit color
 colorscheme gruvbox
+
