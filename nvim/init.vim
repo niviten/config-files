@@ -62,6 +62,8 @@ autocmd FileType rust setlocal ts=4 sts=4 sw=4 expandtab smartindent " set rust 
 
 " Disable ALE by default
 let g:ale_enabled = 0
+" Disable Copilot by default
+let g:copilot_enabled = 0
 
 " vim-plug
 call plug#begin()
@@ -103,6 +105,8 @@ call plug#begin()
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
+    " Discord presence
+    Plug 'andweeb/presence.nvim'
 call plug#end()
 
 " theme configs
