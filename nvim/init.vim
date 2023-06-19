@@ -111,6 +111,9 @@ call plug#begin()
 
     " wakatime
     Plug 'wakatime/vim-wakatime'
+
+    " commenting tool
+    Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " theme configs
