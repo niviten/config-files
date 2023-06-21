@@ -68,9 +68,16 @@ let g:copilot_enabled = 0
 
 " vim-plug
 call plug#begin()
-    " gruvbox used by ThePrimeagen
-    Plug 'morhetz/gruvbox'
+    " gruvbox theme; used by ThePrimeagen
+    " light theme is blueish, so changing to another theme
+    " Plug 'morhetz/gruvbox'
     
+    " theme: catppuccin/nvim
+    " Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+    " theme: projekt0n
+    Plug 'projekt0n/github-nvim-theme'
+
     " nerd tree
     Plug 'preservim/nerdtree'
 
@@ -99,6 +106,9 @@ call plug#begin()
     " For rust
     Plug 'rust-lang/rust.vim'
 
+    " For JavaScript
+    Plug 'pangloss/vim-javascript'
+    
     " ALE
     Plug 'dense-analysis/ale'
 
@@ -118,6 +128,9 @@ call plug#end()
 
 " theme configs
 set background=light    " light theme
-let g:gruvbox_contrast_light = 'hard'   " hard contrast
-let g:gruvbox_color_column = 'bg1'      " column limit color
-colorscheme gruvbox
+" let g:gruvbox_contrast_light = 'hard'   " hard contrast
+" let g:gruvbox_color_column = 'bg1'      " column limit color
+" colorscheme gruvbox
+" colorscheme catppuccin-latte
+colorscheme github_light
+let g:javascript_plugin_jsdoc = 1
