@@ -44,6 +44,9 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
 
+" Change to normal mode in terminal
+:tnoremap <Esc> <C-\><C-n>
+
 set path=.,,**  " search in current directory and subdirectories
 
 set ignorecase  " search ignore case
