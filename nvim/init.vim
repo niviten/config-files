@@ -8,7 +8,7 @@ if (empty($TMUX))
   endif
 endif
 
-set number  " show line number
+set number relativenumber  " show relative line number (hybrid)
 
 " indentation
 set autoindent
