@@ -1,0 +1,5 @@
+if [ -z "$1" ]; then
+    tmux kill-session
+else
+    tmux kill-session -t $1
+fi

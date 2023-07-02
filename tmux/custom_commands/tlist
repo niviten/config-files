@@ -1,0 +1,3 @@
+# list all tmux sessions
+tmux ls
+
