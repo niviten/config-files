@@ -63,6 +63,7 @@ autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab smartindent " set pyt
 autocmd FileType go setlocal ts=4 sts=4 sw=4 expandtab smartindent " set go indentation
 autocmd FileType rust setlocal ts=4 sts=4 sw=4 expandtab smartindent " set rust indentation
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab smartindent " set json indentation
+autocmd Filetype javascriptreact setlocal ts=2 sts=2 sw=2 expandtab smartindent " set jsx indentation
 
 " Disable ALE by default
 let g:ale_enabled = 0
@@ -137,3 +138,5 @@ set background=light    " light theme
 " colorscheme catppuccin-latte
 colorscheme github_light
 let g:javascript_plugin_jsdoc = 1
+" Nerdtree show hidden files
+let NERDTreeShowHidden = 1
