@@ -1,0 +1,7 @@
+1. Install Vim plug and then 'PlugInstall'.
+2. Configure wakatime.
+3. Configure github copilot.
+4. Configure cocnvim.
+    - CocInstall coc-json coc-tsserver
+    - CocInstall coc-rust-analyzer # for rust
+5. Install 'xclip' to yank from nvim to clipboard.
