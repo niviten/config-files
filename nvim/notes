@@ -5,3 +5,4 @@
     - CocInstall coc-json coc-tsserver
     - CocInstall coc-rust-analyzer # for rust
 5. Install 'xclip' to yank from nvim to clipboard.
+6. Install 'ripgrep' used in telescope plugin.
