@@ -136,6 +136,15 @@ call plug#begin()
 
     " commenting tool
     Plug 'preservim/nerdcommenter'
+    
+    " Game to get good at vim motions, created by ThePrimeagen
+    Plug 'ThePrimeagen/vim-be-good'
+
+    " File finder
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 
 " theme configs
@@ -148,3 +157,9 @@ colorscheme github_light
 let g:javascript_plugin_jsdoc = 1
 " Nerdtree show hidden files
 let NERDTreeShowHidden = 1
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
