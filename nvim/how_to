@@ -1,0 +1,16 @@
+// find character
+f{character}, t{character}
+// find character reverse
+F{character}, t{character}
+
+// move up and down
+CTRL + D, CTRL + U
+
+// select, delete, yank sections
+vap, va{, va[, va(, va", ...
+dap, da{, da[, da(, da", ...
+yap, ya{, ya[, ya(, ya", ...
+...
+
+// align intendation
+==, =ap, =a{, ...
