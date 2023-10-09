@@ -14,3 +14,26 @@ yap, ya{, ya[, ya(, ya", ...
 
 // align intendation
 ==, =ap, =a{, ...
+
+// get current line info
+Ctrl + g
+
+// go to specific line
+<line_num> G
+
+// go to matching paranthesis
+%
+
+// substitue command
+:s/old/new -> substitue new for old (first occurance in the line only)
+:s/old/new -> substitue new for old (all occurances in the line)
+:#,#s/old/new/g -> #,# are the line numbers of the range of lines
+:%s/old/new/g -> whole file
+:%s/old/new/gc -> whole file with prompt whether to substitue of not
+
+// execute external command
+:!<command> -> :!ls
+
+// write to external file
+// select lines and do the same to write only the selected lines
+:w <file_name>
