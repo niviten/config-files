@@ -37,3 +37,6 @@ Ctrl + g
 // write to external file
 // select lines and do the same to write only the selected lines
 :w <file_name>
+
+// reposition the current line in the center of the screen
+zz
