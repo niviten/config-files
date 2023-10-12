@@ -40,3 +40,6 @@ Ctrl + g
 
 // reposition the current line in the center of the screen
 zz
+
+// for loop in vim
+:for i in range(start, end, inc/dec) | put = i . ' some text' | endfor
