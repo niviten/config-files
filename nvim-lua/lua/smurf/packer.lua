@@ -77,4 +77,6 @@ return require('packer').startup(function(use)
 
   -- Wakatime tracking
   use('wakatime/vim-wakatime')
+
+  use { 'neoclide/coc.nvim', branch = 'release' }
 end)
