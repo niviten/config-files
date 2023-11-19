@@ -46,3 +46,14 @@ zz
 
 // see last changes
 :changes
+
+// undo
+u
+// redo
+Ctrl + r
+
+// buffer navitation
+:e <file_name> -> open the file as buffer
+:bn -> move to next buffer
+:bp -> move to previous buffer
+:bd -> close the current buffer
