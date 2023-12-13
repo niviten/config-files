@@ -47,13 +47,13 @@ vim.o.splitright = true
 -- Enable filetype plugins and indentations
 vim.cmd('filetype plugin indent on')
 -- Set filetype-specific settings
-vim.cmd('autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab smartindent')
-vim.cmd('autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab smartindent')
-vim.cmd('autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab smartindent')
+vim.cmd('autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab smartindent')
+vim.cmd('autocmd FileType typescript setlocal ts=4 sts=4 sw=4 expandtab smartindent')
+vim.cmd('autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab smartindent')
 vim.cmd('autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab smartindent')
 vim.cmd('autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab smartindent')
 vim.cmd('autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab smartindent')
 vim.cmd('autocmd FileType go setlocal ts=4 sts=4 sw=4 expandtab smartindent')
 vim.cmd('autocmd FileType rust setlocal ts=4 sts=4 sw=4 expandtab smartindent')
-vim.cmd('autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab smartindent')
-vim.cmd('autocmd FileType javascriptreact setlocal ts=2 sts=2 sw=2 expandtab smartindent')
+vim.cmd('autocmd FileType json setlocal ts=4 sts=4 sw=4 expandtab smartindent')
+vim.cmd('autocmd FileType javascriptreact setlocal ts=4 sts=4 sw=4 expandtab smartindent')
