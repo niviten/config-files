@@ -1,3 +1,6 @@
+-- Block cursor
+vim.opt.guicursor = ""
+
 -- Show line number (relative)
 vim.opt.number = true
 vim.opt.relativenumber = true
