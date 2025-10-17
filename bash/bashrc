@@ -1,0 +1,31 @@
+# ---- Better Bash History ----
+
+# Bigger history (memory + file)
+export HISTSIZE=100000
+export HISTFILESIZE=200000
+
+# Don't store duplicate lines or lines starting with a space.
+# 'ignoreboth' == ignorespace + ignoredups
+# 'erasedups' keeps the most recent occurrence (old duplicates removed)
+export HISTCONTROL=ignoreboth:erasedups
+
+# Ignore trivial commands (tweak to taste)
+export HISTIGNORE='ls:ll:la:cd:pwd:clear:history:exit:bg:fg'
+
+# Add timestamps to each entry
+export HISTTIMEFORMAT='%F %T '
+
+# Secure history file permissions
+export HISTFILEMODE=600
+
+# Append to the history file (don’t overwrite), and keep multiline commands intact
+shopt -s histappend
+shopt -s cmdhist
+shopt -s lithist
+
+# Write and read history after every command so parallel shells stay in sync
+# -a: append this session's new lines
+# -n: read any new lines from other sessions
+# Preserve any existing PROMPT_COMMAND
+PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+# ---- End Better Bash History ----
